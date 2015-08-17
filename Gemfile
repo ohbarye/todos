@@ -39,5 +39,3 @@ gem 'rails-backbone'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'rails-backbone'
