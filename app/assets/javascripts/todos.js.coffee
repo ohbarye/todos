@@ -6,11 +6,6 @@
 # Load the application once the DOM is ready, using `jQuery.ready`:
 $ ->
 
-  _.templateSettings =
-    interpolate: /\{\{(.+?)\}\}/g,
-    evaluate: /\{%(.+?)%\}/g,
-    escape: /\{%-(.+?)%\}/g
-
   # Todo Model
   # ----------
 
@@ -79,7 +74,7 @@ $ ->
     tagName:  "li"
 
     # Cache the template function for a single item.
-    template: _.template($('#item-template').html())
+    template: JST['backbone/templates/item-template']
 
     # The DOM events specific to an item.
     events:
@@ -140,7 +135,7 @@ $ ->
     el: $("#todoapp")
 
     # Our template for the line of statistics at the bottom of the app.
-    statsTemplate: _.template($('#stats-template').html())
+    statsTemplate: JST['backbone/templates/stats-template']
 
     # Delegated events for creating new items, and clearing completed ones.
     events:
